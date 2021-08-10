@@ -8,6 +8,16 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case ADD_MOVIE:
+      const newMovie = {
+        ...action.payload,
+        id: state.movies.reduce(
+          (accumulator, currentValue) =>
+            Math.max(accumulator, currentValue.id) + 1,
+          0
+        ),
+      };
+      return { ...state, movies: [...state.movies, newMovie] };
     case DELETE_MOVIE:
       return {
         movies: state.movies.filter((item) => action.payload !== item.id),

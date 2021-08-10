@@ -76,6 +76,7 @@ const mapStateToProps = (state) => {
   console.log(state);
   return {
     movies: state.movies,
+    favorites: state.favorites,
   };
 };
 

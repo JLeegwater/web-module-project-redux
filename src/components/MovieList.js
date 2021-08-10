@@ -5,6 +5,7 @@ import MovieFooter from "./MovieFooter";
 
 const MovieList = (props) => {
   const { movies } = props;
+  console.log("🚀 ~ file: MovieList.js ~ line 8 ~ MovieList ~ movies", movies);
 
   return (
     <div className="col">
@@ -33,7 +34,7 @@ const MovieList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.movies,
+    movies: state.movieReducer.movies,
   };
 };
 

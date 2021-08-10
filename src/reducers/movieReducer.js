@@ -20,6 +20,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, movies: [...state.movies, newMovie] };
     case DELETE_MOVIE:
       return {
+        ...state,
         movies: state.movies.filter((item) => action.payload !== item.id),
       };
     default:

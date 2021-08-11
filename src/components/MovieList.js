@@ -5,7 +5,7 @@ import MovieFooter from "./MovieFooter";
 
 const MovieList = (props) => {
   const { movies } = props;
-  console.log("🚀 ~ file: MovieList.js ~ line 8 ~ MovieList ~ movies", movies);
+  // console.log("🚀 ~ file: MovieList.js ~ line 8 ~ MovieList ~ movies", movies);
 
   return (
     <div className="col">
